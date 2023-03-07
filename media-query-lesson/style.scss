@@ -1,0 +1,43 @@
+///there aren't established breakpoints, 
+/// but for this exercise we will use the following bootstrap 5 screen breakpoints
+////$mobile: 576px;
+///$tablet: 768px;
+///$laptop: 992px;
+///$desktop: 1200px;
+*{margin: 10px;
+padding: 0px;
+box-sizing: border-box;
+
+body {font-family: sans-serif;
+font-size: 55px}
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    gap: 30px;
+}
+
+[class ^="row-"]{display: flex;
+flex-direction: row;
+gap: 30px;}
+
+[class ^="box-"]{
+    background-color: #c4c4c4;
+    width: (100%)/3;
+    border: 2px solid black;
+    height: 100vh/3;
+    display: grid;
+    place-items: center;
+  
+}
+@media (max-width: 650px) {
+    .container {}
+    [class ^="row-"] {
+        display: flex;
+        flex-direction: column;
+    }
+    [class ^="box-"] {width: 30%;
+    font: 80% vw;}
+}

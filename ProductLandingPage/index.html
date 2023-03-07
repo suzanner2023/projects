@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css" />
+        <title>Product Landing Page</title>
+            </head>
+    <body>
+        <div class="container"> 
+            <header id="header">
+               <img id="header-img" src="/ProductLandingPage/images/logo.png" />             
+            <div class="horiz-nav">
+                <nav id="nav-bar" class="main-nav">
+                <div ><a class="nav-link" href="#details">Details</a></div>
+                <div ><a class="nav-link" href="#form">Register</a></div>
+                <div ><a class="nav-link" href="#contact-info">Contact Us</a></div>
+                </nav></div> 
+            </header>
+            <div id="sidebar" class="sidebar">
+                <h4>Upcoming</h4>
+                <ul>
+                    <li class="sidebar-text">4/10 Soy Candle Class</li>
+                    <li class="sidebar-text">4/20 Pittsburgh Maker Fair</li>
+                    <li class="sidebar-text">7/10 St. James Art Fair</li>
+                    <li class="sidebar-text">11/15 Holiday Market</li>
+                    </ul></div>
+            <h2>Making Soy Candles With Natural Oils</h2>
+            <div id="details" class="product">
+                <p>Did you know that most decorative candles are made with petroleum-based synthetic fragrances that can include phthalates and cancer-causing chemicals? In this class you will blend natural essential oils to create your own poured soy candle. All materials will be provided.</p>
+                  </div>            
+            <div id="details2" class="product">
+                <p>Due to equipment limitations, class will be divided into two sessions, please select your preferred time when registering for the course. No walk-in registrations allowed. </p>
+                </div> 
+            <div id="main-video">
+                <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/MQUu_N_5GqA" 
+                title="YouTube video player" frameborder="10" 
+                id="video">
+                    </iframe>
+                </div>       
+                  
+            <div id="formblock" class="item3"><h3>Register for April 10, 2023</h3>
+                <form id="form" method="post" action="https://www.freecodecamp.com/email-submit" ><fieldset>
+                    <label id="name-label">Name <input id="name" type="text" placeholder="First Last" required /></label>
+                   <label id="email-label">Email <input id="email" type="email" placeholder="email required" required /></label>
+                   </fieldset>
+                   <fieldset>
+                   <label id="preferred-time">Preferred class time: <select id="time" name="preferred-time">
+                      <option value="">(select)</option>
+                      <option value="April 10th 2023 10am">April 10th, 2023 10am</option>
+                      <option value="April 10th 2023 noon">April 10th, 2023 noon</option>
+                      <option value="April 10th 2023 2pm">April 10th, 2023 2pm</option>
+                      </select></label>
+                 </fieldset>
+                  <fieldset>
+                    <p id="experience">Previous Experience?</p>
+                  <label id="exp" for="expert-perfume"><input id="expert-perfume" type="checkbox" name="level" value="level1"/>Some natural scent experience</label>
+                  <label id="exp" for="expert-candle"><input id="expert-candle" type="checkbox" name="level" value="level2" />Some candle-making experience</label>
+                  <label id="exp" for="newby"><input id="newby" type="checkbox" name="level" value="level3" />It's all new to me</label>
+                  </fieldset>
+                  <input type="submit" id="submit"/>
+                </form>         
+                    </div>
+        
+<footer id="contact-info" class="main-footer">
+    <p>Shadow & Light</p>
+    <p>shadowandlightestablished2023@gmail.com</p>
+    <p>Morgantown, WV</p>
+    </footer>  
+</div>
+</body>
+</html>

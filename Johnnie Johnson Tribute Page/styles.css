@@ -1,0 +1,22 @@
+* {box-sizing: border-box;}
+header {font-size: 170%; font-family: Tahoma, Arial;
+text-align: center;}
+body {background-color: hsla(207, 8%, 51%, 50%); font-family: Tahoma;
+ color: #272E34;}
+.image {display: block;
+margin: 0 auto;
+max-width: 100%;
+  margin: auto;}
+.img {background-color:hsla(207, 8%, 51%, 50%);}
+figcaption {text-align: center;}
+#tribute-info {font-family: Tahoma;}
+ul {list-style-type:none}
+li {padding: 0 0 10px 0}
+.album {color: #940693  ; font-weight:800;}
+.single {color: #940693  ; font-weight:500; }
+#tribute-link {color:#1A20AB ;}
+.date {color: #0F1214;font-weight: 550;}
+.movie {color:#7E1F51; font-weight: 550; 
+}
+.video-container { padding: 0 40px 40px 20px;}
+.video {max-width: 100%}

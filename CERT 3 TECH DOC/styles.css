@@ -1,0 +1,90 @@
+body {font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+background-color: rgb(236, 224, 224);
+color: rgb(25, 25, 37);
+line-height: 1.4;
+min-width: 290px;
+}
+
+header {
+    color: rgb(255, 77, 0);
+    margin: 10px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: thin
+}
+#main-doc header {
+    text-align: left;
+    margin: 0px;}
+
+#navbar {position: fixed;
+min-width: 200px;
+top: 0px;
+left: 20px;
+width: 20px;
+height: 100%;
+border-right: solid;
+border-color: rgba(0, 22, 22, 0.4);
+}
+
+#main-doc {position: absolute;
+margin-left: 225px;
+padding: 20px;
+margin-bottom: 110px;}
+
+section article {
+    color: rgb(44, 43, 43);
+    margin: 15px;
+    font-size: 1em;
+}
+section li {
+    margin: 10px 0px px 20px;
+}
+
+code {
+    display: block;
+    width: 60%;
+    text-align: left;
+    position: relative;
+    white-space: pre-line;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: rgb(184, 175, 175);
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: 15%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 200px;}
+
+nav header {font-size: 1.15em;}
+
+#navbar ul{
+        height: 100%;
+        padding: 0%;
+        overflow-y: auto;
+        overflow-x: hidden;}
+#navbar li {
+        color: rgb(185, 100, 100);
+        border-top: 1px solid;
+        list-style: none;
+        position: relative;
+        width: 100%}
+ #navbar a {
+        display: block;
+        padding: 5px 30px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.properties {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+@media all and (max-width: 600px) {
+body {background-color: rgb(177, 186, 114);}
+nav {display: none;}
+#main-doc {margin-left: 20px;}
+}

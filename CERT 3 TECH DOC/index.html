@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ <nav id="navbar">
+ <header>CSS Page Layout</header>
+  <ul>
+    <li><a class="nav-link" href="#responsive_design">Responsive Design</a></li>
+    <li><a class="nav-link" href="#viewport_and_scale">Viewport and Scale</a></li>
+    <li><a class="nav-link" href="#default_styles">Default Styles</a></li>  
+   <li><a class="nav-link" href="#media_queries">Media Queries</a></li>
+   <li><a class="nav-link" href="#flexbox">Flexbox</a></li>
+    <li><a class="nav-link" href="#css_grid">CSS Grid</a></li>
+    </ul>
+</nav>
+<main id="main-doc">
+    <section class="main-section" id="responsive_design">
+        <header>Responsive Design</header>
+        <article>
+    <p>Screens can vary in size from a tiny screen on a watch, to the small screen on a phone, to a tablet, to a PC moniter to a 6' wide television. By designing webpages with responsive elements, we are able to maintain the design integrity, preserve navigation and present the information exactly as intended for all audiences on all screens.</p>
+    <p>Basic structure is created with default behavior of common elements such as paragraphs (p) and dividers (div). Overall presentation of elements can be controlled by using device sensitive settings such as media queries or by setting the pages viewport and scale, controlling how the information will render on the screen.</p>
+    <p>Page design further enables ideal presentation of the elements on the screen. In CSS we are able to manipulate the placement of paragraph and div elements, presenting them either in a horizontal presentation or in a vertical stack, with the orientation (left to right or right to left, top to bottom or bottom to top). Flexbox is the powerful tool that allows for the orientation of elements in either rows or columns. CSS Grid allows elements to be arranged as <b>both</b> rows and columns.</p>
+     </article>
+      </section>
+       
+      <section class="main-section" id="viewport_and_scale">
+        <header>Viewport and Scale</header>
+        <article>
+        <p>With the release of HTML5, web designers were provided a means of controlling the viewport (area of the window in which web content can be seen) through the meta tag. A fundamental difference is realized with the addition of the viewport element in the meta-data in the head element. The viewport element renders the page width to match the width of the device's screen. </p>
+        <p>By setting the scale we are able to control the zoom level when the site is initially loaded by the browser. Prior to this being something that could easily be configured in the html, it was common for mobile phone screens to render webpages in a way that made scrolling from side to side or finger zooming & scrolling from side to side necessary.  </p>
+        <p>The viewport and scale are commonly set using the following:</p>
+        <p><code>meta name="viewport" content="width=device-width, initial-scale=1.0"</code></p>
+    <p></p></article></section>
+    <section id="default_styles" class="main-section">
+        <header>Default Styles</header>
+    <article>
+      <p>HTML by default will organize paragraphs and div elements in a sequential list, with each element starting a new line.  That is because p and div elements are by default defined as block elements, and block elements are assumed to have be separate containers, and each are presented with each container on it's own line. Other elements like input, span and anchors are by default 'inline', not separated on their own line.
+      </article></section>
+      <section id="media_queries" class="main-section">
+        <header>Media Queries</header>
+      <article>
+        <p>Media queries allow the web designer to 'optimize' the design based on characteristics of the users screen. An example of this type of responsive design is the way Google Maps looks on your mobile phone versus on your laptop --- on the laptop the presentation is portrait, with navigation elements are on the left of the screen, when same site is viewed on your phone, the presentation is landscape and the navigation component shifts to the bottom of the screen. If you were to compare the two screens side by side you'd notice graphical elements present on the monitor that aren't on the mobile phone screen, differences in text and the presence of navigation elements --- these differences are examples of the power of using media queries to construct a webpage. </p>
+        <p>Media queries are structured as a combination of __ and ___, with rules applied by ____ and ____.</p>
+        <p><code>@media blah blak { asdfa : asdfasdf;}</code></p>
+      </article></section>
+   
+       <section id="flexbox" class="main-section">
+      <header>Flexbox</header>
+      <article>
+        <p>For laying out simple pages, or configuring the elements of a larger design, the flexbox module provides a means of arranging elements in horizontal or vertical direction, in a container that can expand to fill the available free space or shrink to prevent contents from overflowing. It is considered a module because it is a collection of tools that can be applied to both parent and child containers. 
+                </p>
+        <p>THe flexbox is divided into two axis, a main and cross, with direction of main based upon how whether the main (or primary axis) is set for horizontal or vertical. In setting the main size, start and end and cross size, start and end is then used to locate the items within the flexbox. 
+               </p>
+        <p>The flexbox container is defined first by setting the flexbox</p>
+        <p><code>.container {display: flex;}</code></p>
+<p>After the flexbox is set, the direction must be established for the parent, with the following options: </p>
+<ul class="properties">
+    <li><b>row</b>(default) left to right</li>
+    <li><b>row-reverse</b> right to left</li>
+    <li><b>column</b> top to bottom</li>
+    <li><b>column-reverse</b> bottom to top</li></ul>
+<p>By default the items within the parent container will try to stay with in the line of the set direction, the flex-wrap property will allow the following options:</p>
+<ul class="properties">
+    <li><b>wrap</b> items will wrap in specified direction to fill the container</li>
+    <li><b>no wrap</b> (default) items will remain on one line in the specified direction and not wrap</li>
+    <li><b>wrap-reverse</b> items will wrap to multiple lines but in a serpentine manner</li>
+    </ul>
+<p>Within the parent container, items can be aligned in relation to the main axis using the justify-content property, the options are:</p>
+<ul class="properties">
+        <li><b>flex-start</b> items packed toward start of the main flex direction</li>
+        <li><b>flex-end</b> items packed toward end of the main flex direction</li>
+        <li><b>start</b> items packed toward start of the writing mode direction????</li>
+        <li><b>end</b> items packed toward the end of the writing mode direction</li>
+        <li><b>left</b> items are toward the left edge of the container (must be consistent with the set main flex-direction or it will behave like start)</li>
+        <li><b>right</b> items are toward the right edge of the container (must be consistent with the set main flex-direction or it will behave like end)</li>
+        <li><b>center</b> items arranged along the center of the main axis</li>
+        <li><b>space-between</b> items will be distributed evenly with equal space between with first and last item having 1/2 the space between elements</li>
+        <li><b>space-around</b> items will be spaced evenly with space around each, with first and last item having 1/2 the space of items between </li>
+        <li><b>space-evenly</b> all items have equal space around each, including first and last item </li>
+        <li><b>safe</b> keeps all items on screen</li>
+        <li><b>unsafe</b> items could be pushed off-screen</li>
+</ul> 
+<p>Items can be aligned in the cross direction using the align-items property. The options for align-items are: </p>
+<ul class="properties">
+    <li><b>stretch</b> (default) stretch to fix specified container size based on the min-width and max-width settings</li>
+    <li><b>flex-start, start, self-start</b> items are placed at the start of the cross axis, with start and self-start affected by the set flex-direction and writing-mode rules</li>
+    <li><b>flex-end, end, self-end</b> items are placed at the end of the cross axis, with end and self-end affected by the writing-mode rules and flex-direction</li>
+    <li><b>center</b> items are centered on the cross-axis</li>
+    <li><b>baseline</b> items are centered along the axis</li>
+</ul>
+<p>To align items when flex-wrap is set to wrap or wrap-reverse, the align-content property can be set to arrange the items in the following ways: </p>
+<ul class="properties">
+    <li><b>normal</b> (default): items are packed in their default position per the wrap direction</li>
+    <li><b>flex-start, start</b> items are packed at the start of the container, with start being based on the writing-mode</li>
+    <li><b>flex-end, end></b> items are packed to the end of the container, with end being based on the set writing-mode.</li>
+    <li><b>center</b> items are centered in the container</li>
+    <li><b>space-between</b> items are evenly distributed from start to end of the container</li>
+    <li><b>space-around</b> items are evenly distributed with equal space around each line</li>
+    <li><b>space-evenly</b> items are evenly distributed with equal space around each item</li>
+    <li><b>stretch</b> lines are stretched to take up the empty space in the container</li>
+</ul>
+<p>To explicitly set the space between items within the parent container, the <b>gap</b> property can be used. It applies to only the space bewteen items and does not take into consideration the space between items and the outer edges. Setting gap sets the minimum value in the case where space-between or justify-content are also in place. </p>
+<code>.container {display: flex;
+    gap: 5px; /* row-gap */
+    gap: 5px 20px; /* row-gap column-gap */
+    row-gap: 5px;
+    column-gap: 20px;</code>
+<p>The behavior of child items within the parent flex container can be controlled by a set of properties:</p>
+   <ul class="properties">
+    <li><b>order</b> by default items are ordered in the same order they are listed in the source, however, it is possible to force a different order using the order property.</li>
+    <li><b>flex-grow</b> this property allows the specified flex item to grow if necessary by proportion to take up the space within the flex container. </li>
+    <li><b>flex-shrink</b> like flex-grow, but this allows the specified flex item to shrink as necessary</li>
+    <li><b>align-self</b> this allows the default arrangement or the alignment specified in align-items to be overridden for a specified flex item.</li>
+    
+   </ul> 
+    </article></section>
+     
+      <section id="css_grid" class="main-section">
+      <header>CSS Grid</header>
+      <article></article> 
+      <p>While Flexbox is powerful, it is limited to only either horizontal or vertical arrangement. CSS Grid allows for manipulation along both the horizontal and vertical axis. The CSS Grid layout is applied to parent containers or element. The size of a grid’s row and column is determined with grid-template-rows and grid-template-columns, respectively and the child elements are placed within using grid-column and grid-row. As with Flexbox, it doesn't matter what order you place the items in the html, they can be easily re-arranged in the grid. The element that the grid is applied to (the container) is defined by using the following CSS: </p>
+      <p><code>.container {display: grid; }</code></p>
+      <p>The grid lines that create the structure of the grid can be either horizontal (row grid lines) or vertical (column grid lines). The space between grid lines is referred to as the grid track, and the space created by four grid lines is referred to as the grid area. The children of the grid container are referred to as grid items. The space between two adjacent row grids and two adjacent column grids is referred to as a cell.  It is a single unit of the grid.</p>
+      <p>The following CSS properties are used to define the grid:</p>
+      <ul class="properties">
+        <li><b>display: grid</b> creates a block level grid.</li>
+        <li><b>display: inline-grid</b> creates an inline-level grid.</li>
+        </ul>
+    <p>A grid template area is defined using the grid-template-areas toolset. Grid-template-area defines a grid template by referencing the names of the grid areas which are specified with the grid-area property. The syntax provides a visualization of the structure of the grid. If the name of a grid area is repeated, then the content will span those cells. A period (<b>.</b>) indicates an empty cell and <b>none</b> indicates that no grid areas are defined. In the example below, the grid is comprised of four columns and three rows, with the header grid-area consuming the four cells in the top row, the main grid-area taking the first two cells in the second row, an empty cell and then a sidebar consuming the last cell in the second row. The footer consumes the 4 cells in the bottom row.</p> 
+        <code>.item-a {
+            grid-area: header;
+          }
+          .item-b {
+            grid-area: main;
+          }
+          .item-c {
+            grid-area: sidebar;
+          }
+          .item-d {
+            grid-area: footer;
+          }
+          
+          .container {
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px;
+            grid-template-rows: auto;
+            grid-template-areas: 
+              "header header header header"
+              "main main . sidebar"
+              "footer footer footer footer";
+          }</code>
+<p>CSS Grid can also place items automatically, rather than requiring every individual item to be specifically assigned to a location in the grid. THis is accomplished via the <b>grid-auto-flow</b> property. If an item is not placed specifically on the grid, the <i>auto-placement-algorithm</i> will automatically place the item in the grid. The auto-placement algorithm can be modified with the following properties:</p>
+    <ul class="properties">
+        <li><b>row</b> tells the auto-placement algorithm to fill each row in turn, adding new rows as needed.</li>
+        <li><b>column</b> tells the auto-placement algorithm to fill in each column in turn, adding new columns as necessary</li>
+        <li><b>dense</b> tells the auto-placement algorithm to attempt to fill in holes earlier in the grid if smaller items come up later. Dense only changes the visual order.</li>
+    </ul><p>Shorthand can be used to set the grid-template definition, the <b>grid</b> property allows the rows, columns, areas, auto-rows, auto-columns and auto-flow to be set with a single declaration. The values that are used with <b>grid</b> shorthand are as follows:</p>
+    <ul class=properties>
+        <li><b>none</b> sets all sub properties to their intial values</li>
+        <li><b>other properties</b></li>
+        <li><b>grid-template</b> works the same as the grid-template shorthand</li>
+        <li><b>grid-template-rows</b> in combination with <b>auto-flow</b> or <b>dense</b> sets the grid-template-rows to the specified value. A forward slash separates row from column.</li>
+                   </ul>
+    <code>
+        .container {
+            grid: 100px 300px / 3fr 1fr;
+          }
+          
+          .container {
+            grid-template-rows: 100px 300px;
+            grid-template-columns: 3fr 1fr;
+          }
+    </code>
+    <p>as are these two examples</p>
+    <code>
+        .container {
+            grid: 100px 300px / auto-flow 200px;
+          }
+          
+          .container {
+            grid-template-rows: 100px 300px;
+            grid-auto-flow: column;
+            grid-auto-columns: 200px;
+          }
+    </code>
+    
+      </article></section>
+       </main>
+</div>  
+</body>
+
+  </html>
